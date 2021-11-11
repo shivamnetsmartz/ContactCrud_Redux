@@ -32,9 +32,13 @@ useEffect(() => {
 const handleSubmit = (e) =>{
   e.preventDefault();
 
-  const checkEmail = contacts.find((contact) => contact.id !== parseInt(id) && contact.email === email && email);
+  const checkEmail = contacts.find(
+    (contact) => contact.id !== parseInt(id) && contact.email === email
+    );
   
-  const checkNumber = contacts.find((contact) => contact.id !== parseInt(id) && contact.number ===  parseInt(number));
+  const checkNumber = contacts.find(
+    (contact) => contact.id !== parseInt(id) && contact.number ===  parseInt(number)
+    );
 
   if(!email || !number || !name){
     return toast.warning("Please Fill all fields!");
